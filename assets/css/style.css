@@ -88,7 +88,7 @@ header{
     background: #FF7B86;
     color: #fff;
 }
-.navbar_menu_2 .active {
+.navbar_menu_2 a.active {
    background: #fff;
    color: var(--color-secundary);
 }
@@ -374,10 +374,79 @@ footer{
         align-items: center;
     }
     .navigation{
-        display: none;
+        display: block;
+        width: 300px;
+        left: 33%;
+        top: 80px;
+        height: 0;
+        visibility: hidden;
+        transition: height 1s ease;
+        overflow-y: hidden;
+    }
+    .navigation.active{
+        position: absolute;
+        left: 33%;
+        top: 80px;
+        width: 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        height: 320px;
+        text-align: center;
+        visibility: visible;
+    }
+    .navigation.active .menu{
+        display: flex;
+        flex-direction: column;
+    }
+    .navigation.active .navbar_menu_1 .menu a{
+        padding: 20px 0 20px 0;
+        align-items: center;
+        color: var(--color-primary);
+        font-size: 1.3rem;
+    }
+    .navigation.active .navbar_menu_1 .menu a:hover{
+        text-decoration: none;
+        opacity: .8;
+    }
+    .navigation.active .navbar_menu_2 .menu a{
+        padding-left: 0;
+        color: var(--color-primary);
+        font-size: 1.3rem;
+        margin: 0 0 10px 0;
+    }
+    .navigation.active .navbar_menu_2 .menu a.active {
+        background-image: linear-gradient(to right, hsl(13, 100%, 72%),hsl(353, 100%, 62%));
+        color: #fff;
+    }
+    .navigation.active .navbar_menu_2 .menu a li{
+        text-align: center;
+    }
+    .navigation.active .navbar_menu_2{
+        border-top: 1px solid #ccc;
+
+    }
+    .navbar_menu_1 .menu .product:hover > .submenu,
+    .navbar_menu_1 .menu .company:hover > .submenu,
+    .navbar_menu_1 .menu .connect:hover > .submenu{
+        display: block;
+        position: relative;
+        left: 0;
+    }
+    .navbar_menu_1 .submenu {
+        width: 130px;
+        background-color: #ccc;
+        width: 200px;
+        border-radius: 10px;
+        padding: 15px;
+        text-align: center;
+    }
+    .navbar_menu_1 .submenu li{
+        color: var(--color-primary);
+        font-weight: 300;
     }
     .mobile-menu{
         display: block;
+        padding-right: 20px;
     }
     .mobile-menu.active .line1{
         transform: rotate(-46deg) translate(-8px, 9px);
@@ -434,6 +503,10 @@ footer{
     }
 }
 @media (max-width: 425px) {
+    .navigation.active{
+        top: 123px;
+        left: 65px;
+    }
     .banner_title {
         font-size: 2.5em;
     }
@@ -510,6 +583,10 @@ footer{
     }
 }
 @media (max-width: 375px) {
+    .navigation.active {
+        top: 163px;
+        left: 37px;
+    }
     .banner_title {
         font-size: 2em;
     }
@@ -523,6 +600,10 @@ footer{
     }
 }
 @media (max-width: 320px) {
+    .navigation.active {
+        top: 127px;
+        left: 12px;
+    }
     .banner_title {
         font-size: 1.9em;
     }
