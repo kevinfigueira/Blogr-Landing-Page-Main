@@ -58,7 +58,7 @@ O usuário pode:
 ---
 #### Links
 
-<p><a href="https://oliverids.github.io/space-tourism-website/" target="_blank">Link do site</a></p>
+<p><a href="https://kevinfigueira.github.io/Blogr-Landing-Page-Main/" target="_blank">Link do site</a></p>
 
 #### Redes
 <p>Perfil do FrontEnd Mentor - <a href="https://www.frontendmentor.io/profile/kevinfigueira">@kevinfigueira</a></p>
