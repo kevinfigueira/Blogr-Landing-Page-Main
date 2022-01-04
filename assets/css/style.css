@@ -55,40 +55,40 @@ header{
     display: flex;
     align-items: center;
 }
-.navbar_menu_1, .navbar_menu_2{
+.navbar_menu, .navbar_menu_lg{
     flex:1;
 }
-.navbar_menu_1{
+.navbar_menu{
     position: relative;
     padding-left: 20px;
 }
-.navbar_menu_1 .menu, .navbar_menu_2 ul{
+.navbar_menu .menu, .navbar_menu_lg ul{
     display: flex;
     align-items: center;
 }
-.navbar_menu_2 ul{
+.navbar_menu_lg ul{
     justify-content: flex-end;
 }   
-.navbar_menu_1 a, .navbar_menu_2 a{
+.navbar_menu li, .navbar_menu_lg li{
     padding-left: 45px;
     color: #FFD9D8;
     font-weight: 600;
 }
-.navbar_menu_1 .menu a:hover{
+.navbar_menu .menu li:hover{
     text-decoration: underline;
     color: #fff;
 }
-.navbar_menu_2 a{
+.navbar_menu_lg li{
     width: 138px;
     height: 48px;
     border-radius: 30px;
     line-height: 48px;
 }
-.navbar_menu_2 a:hover{
+.navbar_menu_lg li:hover{
     background: #FF7B86;
     color: #fff;
 }
-.navbar_menu_2 a.active {
+.navbar_menu_lg li.active {
    background: #fff;
    color: var(--color-secundary);
 }
@@ -103,7 +103,7 @@ header{
     padding-right: 5px;
 }
 /* === Submenu ===*/
-.navbar_menu_1 .submenu{
+.navbar_menu .submenu{
     position: absolute;
     display: none;
     width: 130px;
@@ -112,25 +112,25 @@ header{
     padding: 15px;
     text-align: left;
 }
-.navbar_menu_1 .submenu li{
+.navbar_menu .submenu li{
     color: #000;
     padding: 5px;
     font-weight: 300;
 }
-.navbar_menu_1 .submenu li:hover{
+.navbar_menu .submenu li:hover{
     color: #000;
     font-weight: bolder;
     text-decoration: none;
 }
-.navbar_menu_1 .menu .product:hover > .submenu{
+.navbar_menu .menu .product:hover > .submenu{
     display: block;
     left: 30px;
 }
-.navbar_menu_1 .menu .company:hover > .submenu{
+.navbar_menu .menu .company:hover > .submenu{
     display: block;
     left: 160px;
 }
-.navbar_menu_1 .menu .connect:hover > .submenu{
+.navbar_menu .menu .connect:hover > .submenu{
     display: block;
     left: 285px;
 }
@@ -323,12 +323,12 @@ footer{
     color: #fff;
     padding-bottom: 45px;
 }
-.menu ul a{
+.menu ul li{
     font-weight: 300;
     line-height: 30px;
     color: #fff;
 }
-.menu ul a:hover{
+.menu ul li:hover{
     text-decoration: underline;
 }
 /* === Media ==== */
@@ -398,41 +398,41 @@ footer{
         display: flex;
         flex-direction: column;
     }
-    .navigation.active .navbar_menu_1 .menu a{
+    .navigation.active .navbar_menu .menu li{
         padding: 20px 0 20px 0;
         align-items: center;
         color: var(--color-primary);
         font-size: 1.3rem;
     }
-    .navigation.active .navbar_menu_1 .menu a:hover{
+    .navigation.active .navbar_menu .menu li:hover{
         text-decoration: none;
         opacity: .8;
     }
-    .navigation.active .navbar_menu_2 .menu a{
+    .navigation.active .navbar_menu_lg .menu li{
         padding-left: 0;
         color: var(--color-primary);
         font-size: 1.3rem;
         margin: 0 0 10px 0;
     }
-    .navigation.active .navbar_menu_2 .menu a.active {
+    .navigation.active .navbar_menu_lg .menu li.active {
         background-image: linear-gradient(to right, hsl(13, 100%, 72%),hsl(353, 100%, 62%));
         color: #fff;
     }
-    .navigation.active .navbar_menu_2 .menu a li{
+    .navigation.active .navbar_menu_lg .menu li{
         text-align: center;
     }
-    .navigation.active .navbar_menu_2{
+    .navigation.active .navbar_menu_lg{
         border-top: 1px solid #ccc;
 
     }
-    .navbar_menu_1 .menu .product:hover > .submenu,
-    .navbar_menu_1 .menu .company:hover > .submenu,
-    .navbar_menu_1 .menu .connect:hover > .submenu{
+    .navbar_menu .menu .product:hover > .submenu,
+    .navbar_menu .menu .company:hover > .submenu,
+    .navbar_menu .menu .connect:hover > .submenu{
         display: block;
         position: relative;
         left: 0;
     }
-    .navbar_menu_1 .submenu {
+    .navbar_menu .submenu {
         width: 130px;
         background-color: #ccc;
         width: 200px;
@@ -440,7 +440,7 @@ footer{
         padding: 15px;
         text-align: center;
     }
-    .navbar_menu_1 .submenu li{
+    .navbar_menu .submenu li{
         color: var(--color-primary);
         font-weight: 300;
     }
